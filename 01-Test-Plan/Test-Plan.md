@@ -1,7 +1,3 @@
-Yes. Let's build **`01-Test-Plan/Test-Plan.md`** first.
-
-Copy everything below into your GitHub file:
-
 # GenAI QA Testing - Test Plan
 
 ## 1. Document Information
