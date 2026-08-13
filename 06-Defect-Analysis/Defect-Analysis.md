@@ -276,3 +276,224 @@ Test Environment
 
 ```text
 XYZUnknownProduct123
+
+### Steps to Reproduce
+
+1. Open the product search page.
+2. Enter `XYZUnknownProduct123`.
+3. Click Search.
+
+### Expected Result
+
+The application should display a clear no-results message.
+
+### Actual Result
+
+Irrelevant products are displayed.
+
+### Severity
+
+Medium
+
+### Priority
+
+Medium
+
+### Status
+
+Open
+
+### AI Assistance
+
+GenAI was used to generate negative search scenarios and search relevance test ideas.
+
+### QA Validation
+
+The search behavior was reviewed against the expected no-results behavior.
+
+---
+
+## BUG-GENAI-006
+
+### Title
+
+Payment failure incorrectly displays order confirmation.
+
+### Module
+
+Payment
+
+### Environment
+
+Test Environment
+
+### Preconditions
+
+- Valid order exists.
+- Test payment method is configured to fail.
+
+### Steps to Reproduce
+
+1. Add a product to the cart.
+2. Proceed to checkout.
+3. Select a test payment method.
+4. Trigger a payment failure.
+5. Observe the order status.
+
+### Expected Result
+
+The payment should be marked as failed and the order should not be incorrectly confirmed.
+
+### Actual Result
+
+The payment fails, but the application displays an order confirmation.
+
+### Severity
+
+Critical
+
+### Priority
+
+Critical
+
+### Status
+
+Open
+
+### AI Assistance
+
+GenAI was used to identify payment failure, transaction consistency, and order-state validation scenarios.
+
+### QA Validation
+
+The defect was classified as critical because incorrect order confirmation can create business and financial impact.
+
+---
+
+# 4. AI-Assisted Defect Analysis
+
+GenAI can assist QA Engineers during defect investigation.
+
+### Example Prompt
+
+```text
+Act as a senior QA Engineer.
+
+Analyze the following defect:
+
+[Defect description]
+
+Provide:
+
+1. Possible defect category
+2. Possible root causes
+3. Additional reproduction scenarios
+4. Regression areas
+5. Suggested severity
+6. Suggested priority
+
+Clearly separate confirmed facts from hypotheses.
+Do not claim a root cause without evidence.
+
+# 5. Human Validation of AI Output
+
+AI suggestions must be reviewed before being added to the defect report.
+
+The QA Engineer validates:
+
+- [ ] Reproduction steps
+- [ ] Expected behavior
+- [ ] Actual behavior
+- [ ] Severity
+- [ ] Priority
+- [ ] Business impact
+- [ ] Root-cause assumptions
+- [ ] Regression scope
+
+AI output is considered an assistant's recommendation, not a confirmed defect analysis.
+
+---
+
+# 6. Defect Severity Guidelines
+
+| Severity | Description |
+|---|---|
+| Critical | Causes major business failure, data loss, security issue, or prevents core functionality |
+| High | Major functionality is affected but the system remains partially usable |
+| Medium | Functionality is affected but a workaround may exist |
+| Low | Minor UI, cosmetic, or low-impact issue |
+
+---
+
+# 7. Defect Priority Guidelines
+
+| Priority | Description |
+|---|---|
+| Critical | Immediate fix required |
+| High | Fix before release where possible |
+| Medium | Fix based on release scope |
+| Low | Can be scheduled for a future release |
+
+---
+
+# 8. Defect Lifecycle
+
+```text
+New
+ ↓
+Assigned
+ ↓
+In Progress
+ ↓
+Fixed
+ ↓
+Retest
+ ↓
+Verified
+ ↓
+Closed
+
+
+If the issue still exists:
+
+Retest
+ ↓
+Failed
+ ↓
+Reopened
+ ↓
+Fixed
+
+```md
+# 9. Defect Quality Checklist
+
+Before submitting a defect:
+
+- [ ] Clear title
+- [ ] Correct module
+- [ ] Environment provided
+- [ ] Preconditions defined
+- [ ] Reproducible steps
+- [ ] Expected result documented
+- [ ] Actual result documented
+- [ ] Severity assigned
+- [ ] Priority assigned
+- [ ] Supporting evidence available
+- [ ] No unsupported root-cause claim
+- [ ] Related regression areas identified
+
+---
+
+# 10. Summary
+
+These defect reports demonstrate:
+
+- Structured defect reporting
+- Severity and priority classification
+- Defect reproduction
+- Negative testing
+- Regression analysis
+- AI-assisted investigation
+- Human validation of AI-generated analysis
+```
+
