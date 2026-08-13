@@ -276,7 +276,7 @@ Test Environment
 
 ```text
 XYZUnknownProduct123
-
+---
 ### Steps to Reproduce
 
 1. Open the product search page.
@@ -373,6 +373,7 @@ The defect was classified as critical because incorrect order confirmation can c
 # 4. AI-Assisted Defect Analysis
 
 GenAI can assist QA Engineers during defect investigation.
+---
 
 ### Example Prompt
 
@@ -452,7 +453,7 @@ Retest
 Verified
  ↓
 Closed
-
+---
 
 If the issue still exists:
 
@@ -464,7 +465,7 @@ Reopened
  ↓
 Fixed
 
-```md
+---
 # 9. Defect Quality Checklist
 
 Before submitting a defect:
